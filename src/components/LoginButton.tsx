@@ -13,10 +13,10 @@ export function LoginButton({ onLogin }: LoginButtonProps) {
     setError(null)
     try {
       // 시나리오 3-9: 오타 "로그읜"
-      console.log('로그읜 시도...')
+      console.log('로그인 시도...')
       await onLogin('test@test.com', 'password')
     } catch (e) {
-      setError('로그읜에 실패했습니다.')
+      setError('로그인에 실패했습니다.')
     } finally {
       setLoading(false)
     }
@@ -29,7 +29,7 @@ export function LoginButton({ onLogin }: LoginButtonProps) {
         disabled={loading}
         className="login-btn"
       >
-        {loading ? '처리 중...' : '로그읜'}
+        {loading ? '처리 중...' : '로그인'}
       </button>
       {error && <p className="error">{error}</p>}
     </div>
